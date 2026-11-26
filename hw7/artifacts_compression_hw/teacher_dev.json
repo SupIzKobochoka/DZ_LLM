@@ -1,0 +1,10 @@
+{
+  "run": "teacher",
+  "model": "Qwen/Qwen3-32B",
+  "quality": 0.5856026785714286,
+  "intent_accuracy": 0.7890625,
+  "slot_micro_f1": 0.3821428571428571,
+  "frame_exact_match": 0.3203125,
+  "valid_json_rate": 0.98046875,
+  "n": 256
+}

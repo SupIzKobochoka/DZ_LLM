@@ -1,0 +1,14 @@
+{
+  "run": "gptq_massive",
+  "method": "GPTQ",
+  "calibration": "massive",
+  "scheme": "W4A16",
+  "calibration_samples": 128,
+  "smoothing_strength": null,
+  "quality": 0.017578125,
+  "intent_accuracy": 0.03515625,
+  "slot_micro_f1": 0.0,
+  "frame_exact_match": 0.0078125,
+  "valid_json_rate": 0.0703125,
+  "n": 256
+}

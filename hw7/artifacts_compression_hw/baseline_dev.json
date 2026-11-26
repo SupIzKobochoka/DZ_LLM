@@ -1,0 +1,10 @@
+{
+  "run": "baseline",
+  "model": "Qwen/Qwen3-0.6B",
+  "quality": 0.08453050947867298,
+  "intent_accuracy": 0.140625,
+  "slot_micro_f1": 0.02843601895734597,
+  "frame_exact_match": 0.0078125,
+  "valid_json_rate": 0.421875,
+  "n": 256
+}

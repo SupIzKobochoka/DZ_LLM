@@ -1,0 +1,14 @@
+{
+  "run": "awq_massive",
+  "method": "AWQ",
+  "calibration": "massive",
+  "scheme": "W4A16",
+  "calibration_samples": 128,
+  "smoothing_strength": null,
+  "quality": 0.001953125,
+  "intent_accuracy": 0.00390625,
+  "slot_micro_f1": 0.0,
+  "frame_exact_match": 0.0,
+  "valid_json_rate": 0.0234375,
+  "n": 256
+}

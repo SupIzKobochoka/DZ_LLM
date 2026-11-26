@@ -1,0 +1,19 @@
+# Model checkpoints (stored on edu-01)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+
+# Local environment and caches
+.venv/
+venv/
+.cache/
+__pycache__/
+.ipynb_checkpoints/
+sparse_logs/
+*.pyc
+*.log
+.env

@@ -1,0 +1,171 @@
+{
+  "baseline": {
+    "quality": 0.08453050947867298,
+    "intent_accuracy": 0.140625,
+    "slot_micro_f1": 0.02843601895734597,
+    "frame_exact_match": 0.0078125,
+    "valid_json_rate": 0.421875,
+    "n": 256
+  },
+  "teacher": {
+    "quality": 0.5856026785714286,
+    "intent_accuracy": 0.7890625,
+    "slot_micro_f1": 0.3821428571428571,
+    "frame_exact_match": 0.3203125,
+    "valid_json_rate": 0.98046875,
+    "n": 256
+  },
+  "student": {
+    "quality": 0.5576223003926701,
+    "intent_accuracy": 0.73828125,
+    "slot_micro_f1": 0.3769633507853403,
+    "frame_exact_match": 0.2890625,
+    "valid_json_rate": 0.9921875,
+    "n": 256
+  },
+  "quantization": [
+    {
+      "run": "baseline",
+      "path": "artifacts_compression_hw/baseline",
+      "method": "dense",
+      "calibration": null,
+      "quality": 0.08453050947867298,
+      "intent_accuracy": 0.140625,
+      "slot_micro_f1": 0.02843601895734597,
+      "frame_exact_match": 0.0078125,
+      "valid_json_rate": 0.421875,
+      "n": 256
+    },
+    {
+      "run": "gptq_massive",
+      "method": "GPTQ",
+      "calibration": "massive",
+      "scheme": "W4A16",
+      "calibration_samples": 128,
+      "smoothing_strength": null,
+      "quality": 0.017578125,
+      "intent_accuracy": 0.03515625,
+      "slot_micro_f1": 0.0,
+      "frame_exact_match": 0.0078125,
+      "valid_json_rate": 0.0703125,
+      "n": 256
+    },
+    {
+      "run": "gptq_wiki",
+      "method": "GPTQ",
+      "calibration": "wiki",
+      "scheme": "W4A16",
+      "calibration_samples": 128,
+      "smoothing_strength": null,
+      "quality": 0.0,
+      "intent_accuracy": 0.0,
+      "slot_micro_f1": 0.0,
+      "frame_exact_match": 0.0,
+      "valid_json_rate": 0.01953125,
+      "n": 256
+    },
+    {
+      "run": "awq_massive",
+      "method": "AWQ",
+      "calibration": "massive",
+      "scheme": "W4A16",
+      "calibration_samples": 128,
+      "smoothing_strength": null,
+      "quality": 0.001953125,
+      "intent_accuracy": 0.00390625,
+      "slot_micro_f1": 0.0,
+      "frame_exact_match": 0.0,
+      "valid_json_rate": 0.0234375,
+      "n": 256
+    },
+    {
+      "run": "smooth_massive",
+      "method": "SmoothQuant",
+      "calibration": "massive",
+      "scheme": "W8A8",
+      "calibration_samples": 128,
+      "smoothing_strength": 0.8,
+      "quality": 0.07454819277108433,
+      "intent_accuracy": 0.125,
+      "slot_micro_f1": 0.024096385542168676,
+      "frame_exact_match": 0.00390625,
+      "valid_json_rate": 0.453125,
+      "n": 256
+    },
+    {
+      "run": "gptq_64",
+      "method": "GPTQ",
+      "calibration": "massive",
+      "scheme": "W4A16",
+      "calibration_samples": 64,
+      "smoothing_strength": null,
+      "quality": 0.005859375,
+      "intent_accuracy": 0.01171875,
+      "slot_micro_f1": 0.0,
+      "frame_exact_match": 0.0,
+      "valid_json_rate": 0.046875,
+      "n": 256
+    },
+    {
+      "run": "smooth_05",
+      "method": "SmoothQuant",
+      "calibration": "massive",
+      "scheme": "W8A8",
+      "calibration_samples": 128,
+      "smoothing_strength": 0.5,
+      "quality": 0.07371379573170732,
+      "intent_accuracy": 0.11328125,
+      "slot_micro_f1": 0.03414634146341464,
+      "frame_exact_match": 0.01171875,
+      "valid_json_rate": 0.39453125,
+      "n": 256
+    }
+  ],
+  "distillation": [
+    {
+      "run": "sft_1",
+      "learning_rate": 2e-05,
+      "epochs": 2,
+      "train_samples": 128,
+      "train_loss": 0.29544468969106674,
+      "quality": 0.26835037787907867,
+      "intent_accuracy": 0.40234375,
+      "slot_micro_f1": 0.1343570057581574,
+      "frame_exact_match": 0.05859375,
+      "valid_json_rate": 0.796875,
+      "n": 256
+    },
+    {
+      "run": "sft_2",
+      "learning_rate": 2e-05,
+      "epochs": 2,
+      "train_samples": 1002,
+      "train_loss": 0.16170601617722286,
+      "quality": 0.48561916147686834,
+      "intent_accuracy": 0.63671875,
+      "slot_micro_f1": 0.33451957295373663,
+      "frame_exact_match": 0.19921875,
+      "valid_json_rate": 0.953125,
+      "n": 256
+    },
+    {
+      "run": "sft_3",
+      "learning_rate": 5e-05,
+      "epochs": 3,
+      "train_samples": 1002,
+      "train_loss": 0.14191998722692015,
+      "quality": 0.5406725543478261,
+      "intent_accuracy": 0.7265625,
+      "slot_micro_f1": 0.35478260869565215,
+      "frame_exact_match": 0.30078125,
+      "valid_json_rate": 0.98828125,
+      "n": 256
+    }
+  ],
+  "selected_run": "sft_3",
+  "student_model": "Qwen/Qwen3-0.6B",
+  "teacher_model": "Qwen/Qwen3-32B",
+  "seed": 42,
+  "target_reached": true,
+  "beats_baseline": true
+}

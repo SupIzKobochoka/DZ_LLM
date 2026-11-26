@@ -1,0 +1,14 @@
+{
+  "run": "gptq_wiki",
+  "method": "GPTQ",
+  "calibration": "wiki",
+  "scheme": "W4A16",
+  "calibration_samples": 128,
+  "smoothing_strength": null,
+  "quality": 0.0,
+  "intent_accuracy": 0.0,
+  "slot_micro_f1": 0.0,
+  "frame_exact_match": 0.0,
+  "valid_json_rate": 0.01953125,
+  "n": 256
+}

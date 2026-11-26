@@ -1,0 +1,13 @@
+{
+  "run": "sft_2",
+  "learning_rate": 2e-05,
+  "epochs": 2,
+  "train_samples": 1002,
+  "train_loss": 0.16170601617722286,
+  "quality": 0.48561916147686834,
+  "intent_accuracy": 0.63671875,
+  "slot_micro_f1": 0.33451957295373663,
+  "frame_exact_match": 0.19921875,
+  "valid_json_rate": 0.953125,
+  "n": 256
+}

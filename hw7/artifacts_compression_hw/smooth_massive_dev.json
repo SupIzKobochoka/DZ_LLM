@@ -1,0 +1,14 @@
+{
+  "run": "smooth_massive",
+  "method": "SmoothQuant",
+  "calibration": "massive",
+  "scheme": "W8A8",
+  "calibration_samples": 128,
+  "smoothing_strength": 0.8,
+  "quality": 0.07454819277108433,
+  "intent_accuracy": 0.125,
+  "slot_micro_f1": 0.024096385542168676,
+  "frame_exact_match": 0.00390625,
+  "valid_json_rate": 0.453125,
+  "n": 256
+}

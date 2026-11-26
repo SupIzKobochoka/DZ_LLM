@@ -1,0 +1,8 @@
+run,path,method,calibration,quality,intent_accuracy,slot_micro_f1,frame_exact_match,valid_json_rate,n,scheme,calibration_samples,smoothing_strength
+baseline,artifacts_compression_hw/baseline,dense,,0.08453050947867298,0.140625,0.02843601895734597,0.0078125,0.421875,256,,,
+gptq_massive,,GPTQ,massive,0.017578125,0.03515625,0.0,0.0078125,0.0703125,256,W4A16,128.0,
+gptq_wiki,,GPTQ,wiki,0.0,0.0,0.0,0.0,0.01953125,256,W4A16,128.0,
+awq_massive,,AWQ,massive,0.001953125,0.00390625,0.0,0.0,0.0234375,256,W4A16,128.0,
+smooth_massive,,SmoothQuant,massive,0.07454819277108433,0.125,0.024096385542168676,0.00390625,0.453125,256,W8A8,128.0,0.8
+gptq_64,,GPTQ,massive,0.005859375,0.01171875,0.0,0.0,0.046875,256,W4A16,64.0,
+smooth_05,,SmoothQuant,massive,0.07371379573170732,0.11328125,0.03414634146341464,0.01171875,0.39453125,256,W8A8,128.0,0.5
